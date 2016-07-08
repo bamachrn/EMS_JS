@@ -1,27 +1,31 @@
 
       <div class="smart-green" >  
+     <center>
         <div  ng-controller="AppCtrl"> 
 		<h1>List of Employees</h1>
-            
-            <table>  <!--class is used to access the class of bootstrap -->
+            <table width="700px">  <!--class is used to access the class of bootstrap -->
                 <thead>
                     <tr>
-                        <th>code</th>
-                        <th>name</th>
-                        <th>city</th>
-                         <tr ng-repeat="emp in employee1"> <!--used to access the contactlist object -->
-                       <td> {{emp.code}}</td>
+                        <th align="center">&nbsp;&nbsp;&nbsp;code</th>
+                        <th align="center">&nbsp;&nbsp;&nbsp;name</th>
+                        <th align="center">&nbsp;&nbsp;&nbsp;city</th>
+			<th colspan="2" align="center" align="center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Action</th>
+                      <tr ng-repeat="emp in employee1"> <!--used to access the contactlist object -->
+                        <td> {{emp.code}}</td>
                         <td>{{emp.name}}</td>
-                        <td>{{emp.city}}</td>
-						
+                        <td>{{emp.city}}</td>				
                         <td> <input type="button" ng-click="edit(emp._id)" value="EDIT" class="btn btn-link"/> </button></td>
-						 <td> <input type="button" ng-click="remove(emp._id)" value="REMOVE" class="btn btn-link" /> </button></td>
-                        
-                    </tr>
+			<td> <input type="button" ng-click="remove(emp._id)" value="REMOVE" class="btn btn-link" /> </button></td>
+                      </tr>
+		      <tr> 
+			<td width="20%"><input type="text" ng-model="emp.code" /></td>
+			<td width="20%"><input type="text" ng-model="emp.name" /></td>
+			<td width="20%"><input type="text" ng-model="emp.city" /></td>
+			<td colspan="2" align="center"><input type="button" id="btn_add1" ng-click="add()" value="ADD" class="btn btn-link"></td>
+		      </tr>
                 </tbody>
             </table>
         </div>
-                        
-                  
+	<center>  
      </div>
         
